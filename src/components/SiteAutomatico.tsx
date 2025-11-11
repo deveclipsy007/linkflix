@@ -355,7 +355,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               <span className="text-gray-500 text-3xl">→</span>
               <div className="relative">
                 <span className="text-white text-9xl font-bold drop-shadow-2xl">R$1.500</span>
-                <span className="block text-red-500 text-lg font-semibold uppercase tracking-wider mt-4 animate-pulse">Black Friday Brasil</span>
+                <span className="block text-red-500 text-3xl font-bold uppercase tracking-wider mt-4 animate-pulse">Black Friday Brasil</span>
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed">
