@@ -360,7 +360,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             </div>
             <p className="text-gray-300 text-lg leading-relaxed">
               Mesmo sistema completo. Preço democratizado.<br />
-              <span className="text-gray-400">Para quem não tem R$7.000 para investir.</span>
+              <span className="text-gray-400">Para quem não tem R$6.000 para investir.</span>
             </p>
           </motion.div>
         </div>
@@ -503,7 +503,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               </div>
 
               <p>
-                Comparado ao investimento real de R$5.000, você está economizando <span className="text-red-500">R$3.500</span>.
+                Comparado ao investimento real de R$6.000, você está economizando <span className="text-red-500">R$4.500</span>.
               </p>
               
               <p className="text-white text-xl bg-red-600/20 border border-red-600/40 rounded-xl p-6">
