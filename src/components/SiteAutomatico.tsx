@@ -14,6 +14,7 @@ import portfolio5 from "../assets/Necati - One Page Website Award 1.png";
 import portfolio6 from "../assets/modelo de Site e e-commerce desenvolvidos para vendas com landing page, pagina de captura e página de lançamento para master class e masterclass 1.png";
 import portfolio7 from "../assets/Landing Page 🌐 1.png";
 import portfolio8 from "../assets/Free Dark Website Template Built in Framer 1.png";
+import bbImage from "../assets/bb.png";
 
 interface SiteAutomaticoProps {
   onBack: () => void;
@@ -201,6 +202,19 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               <span className="text-red-600">todos os dias.</span><br />
               E você nem percebe.
             </h1>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="flex justify-center mb-8"
+            >
+              <img 
+                src={bbImage} 
+                alt="Black Friday" 
+                className="w-64 md:w-80 h-auto object-contain"
+              />
+            </motion.div>
             
             <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto mb-4">
               Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.500</span>.
