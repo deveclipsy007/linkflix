@@ -351,11 +351,11 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
           >
             <p className="text-gray-400 text-lg mb-6">Anos vendendo por</p>
             <div className="flex items-center justify-center gap-8 mb-8">
-              <span className="text-gray-500 text-5xl font-light line-through">$1,200 dólares (aproximadamente 6 mil reais)</span>
-              <span className="text-gray-500 text-3xl">→</span>
+              <span className="text-gray-500 text-6xl font-light line-through">$1,200 dólares (aproximadamente 6 mil reais)</span>
+              <span className="text-gray-500 text-6xl">→</span>
               <div className="relative">
-                <span className="text-white text-9xl font-bold drop-shadow-2xl">R$1.500</span>
-                <span className="block text-red-500 text-3xl font-bold uppercase tracking-wider mt-4 animate-pulse">Black Friday Brasil</span>
+                <span className="text-white text-6xl font-bold drop-shadow-2xl leading-none px-8 py-4 inline-block">R$1.500</span>
+                <span className="block text-red-500 text-6xl font-bold uppercase tracking-wider mt-4 animate-pulse">Black Friday Brasil</span>
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed">
