@@ -151,7 +151,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
     },
     {
       question: "Apenas 7 sistemas nessa condição. Isso é real?",
-      answer: "Completamente. Nossa equipe tem capacidade limitada pra manter a qualidade premium. Após os 7, voltamos ao valor de R$5.000 e fila de espera."
+      answer: "Completamente. Nossa equipe tem capacidade limitada pra manter a qualidade premium. Após os 7, voltamos ao valor de R$6.000 e fila de espera."
     }
   ];
 
@@ -203,7 +203,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             </h1>
             
             <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto mb-4">
-              Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$5.000</span> — está disponível por <span className="text-red-500">R$1.500</span>.
+              Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.500</span>.
             </p>
 
             <p className="text-red-400 text-lg mb-10 flex items-center justify-center gap-2">
@@ -478,7 +478,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
           >
             <div className="text-center mb-10">
               <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-6">
-                Sistema premium de <span className="line-through text-gray-400">R$5.000</span><br />
+                Sistema premium de <span className="line-through text-gray-400">R$6.000</span><br />
                 disponível por <span className="text-red-500">R$1.500</span>.
               </h2>
               
@@ -711,7 +711,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
                   <div className="flex items-center justify-center w-12 h-12 bg-red-600/20 rounded-full mb-4 mx-auto">
                     <span className="text-red-400 text-2xl font-bold">1</span>
                   </div>
-                  <p className="text-white text-xl">O valor retorna para R$5.000</p>
+                  <p className="text-white text-xl">O valor retorna para R$6.000</p>
                 </div>
                 <div className="bg-zinc-950 border border-red-600/30 rounded-xl p-6">
                   <div className="flex items-center justify-center w-12 h-12 bg-red-600/20 rounded-full mb-4 mx-auto">
