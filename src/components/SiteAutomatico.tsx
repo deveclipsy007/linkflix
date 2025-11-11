@@ -351,7 +351,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
           >
             <p className="text-gray-400 text-lg mb-6">Anos vendendo por</p>
             <div className="flex items-center justify-center gap-8 mb-8">
-              <span className="text-gray-500 text-5xl font-light line-through">$1,200</span>
+              <span className="text-gray-500 text-5xl font-light line-through">$1,200 dólares (aproximadamente 6 mil reais)</span>
               <span className="text-gray-500 text-3xl">→</span>
               <div>
                 <span className="text-white text-7xl font-light">R$1.500</span>
