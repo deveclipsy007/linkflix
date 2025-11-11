@@ -151,8 +151,8 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
       answer: "Sim. Se em 30 dias você não estiver satisfeito com o sistema, devolvemos 100% do investimento. Sem perguntas, sem burocracia."
     },
     {
-      question: "Apenas 7 sistemas nessa condição. Isso é real?",
-      answer: "Completamente. Nossa equipe tem capacidade limitada pra manter a qualidade premium. Após os 7, voltamos ao valor de R$6.000 e fila de espera."
+      question: "Apenas 10 sistemas nessa condição. Isso é real?",
+      answer: "Completamente. Nossa equipe tem capacidade limitada pra manter a qualidade premium. Após os 10, voltamos ao valor de R$6.000 e fila de espera."
     }
   ];
 
@@ -194,7 +194,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               className="inline-flex items-center gap-2 px-6 py-3 bg-red-600/20 border border-red-600/50 rounded-full mb-8"
             >
               <AlertCircle className="w-5 h-5 text-red-500" />
-              <span className="text-red-400">Apenas 7 sistemas nesta condição</span>
+              <span className="text-red-400">Apenas 10 sistemas nesta condição</span>
             </motion.div>
             
             <h1 className="text-white text-4xl md:text-6xl lg:text-7xl mb-8 leading-tight">
@@ -221,7 +221,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             </p>
 
             <p className="text-red-400 text-lg mb-10 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" /> Apenas 7 sistemas serão liberados nesta condição.
+              <Zap className="w-5 h-5" /> Apenas 10 sistemas serão liberados nesta condição.
             </p>
 
             <div className="max-w-3xl mx-auto mb-12 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-red-600/30 rounded-2xl p-8">
@@ -526,7 +526,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
 
               <div className="bg-red-600/10 border-2 border-red-600 rounded-xl p-6 text-center">
                 <p className="text-red-400 text-xl flex items-center justify-center gap-2">
-                  <AlertCircle className="w-6 h-6" /> <span className="text-white">ATENÇÃO:</span> Apenas 7 sistemas serão liberados nesta condição.<br />
+                  <AlertCircle className="w-6 h-6" /> <span className="text-white">ATENÇÃO:</span> Apenas 10 sistemas serão liberados nesta condição.<br />
                   Quando acabar, acabou.
                 </p>
               </div>
