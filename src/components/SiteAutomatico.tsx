@@ -212,7 +212,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               <img 
                 src={bbImage} 
                 alt="Black Friday" 
-                className="w-64 md:w-80 h-auto object-contain"
+                className="w-96 md:w-[32rem] lg:w-[40rem] h-auto object-contain"
               />
             </motion.div>
             
