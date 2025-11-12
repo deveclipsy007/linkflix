@@ -734,6 +734,14 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-4">
               A Black System Friday
             </h2>
+            <div className="flex justify-center mb-10">
+              <img
+                src={bbImage}
+                alt="Campanha Black System Friday"
+                className="w-full max-w-[28rem] rounded-2xl shadow-2xl border border-red-600/40"
+                loading="lazy"
+              />
+            </div>
             <p className="text-red-400 text-3xl md:text-4xl mb-12">
               termina em breve.
             </p>
