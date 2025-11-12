@@ -738,7 +738,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               <img
                 src={bbImage}
                 alt="Campanha Black System Friday"
-                className="w-full max-w-[28rem] rounded-2xl shadow-2xl border border-red-600/40"
+                className="w-full max-w-3xl rounded-2xl shadow-2xl border border-red-600/40"
                 loading="lazy"
               />
             </div>
