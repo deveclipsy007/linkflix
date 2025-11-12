@@ -16,6 +16,8 @@ import portfolio7 from "../assets/Landing Page 🌐 1.png";
 import portfolio8 from "../assets/Free Dark Website Template Built in Framer 1.png";
 import bbImage from "../assets/bb.png";
 
+import video1112 from "../assets/1112.mp4";
+
 interface SiteAutomaticoProps {
   onBack: () => void;
 }
@@ -209,9 +211,9 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex justify-center mb-8"
             >
-              <img 
-                src={bbImage} 
-                alt="Black Friday" 
+              <video 
+                src={video1112} 
+                controls
                 className="w-96 md:w-[32rem] lg:w-[40rem] h-auto object-contain"
               />
             </motion.div>
