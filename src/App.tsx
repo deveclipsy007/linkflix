@@ -1,10 +1,30 @@
 import { LinkHub } from "./components/LinkHub";
 import { SiteAutomatico } from "./components/SiteAutomatico";
 import { DevAcelerado } from "./components/DevAcelerado";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<string>("/");
+  const [currentPage, setCurrentPage] = useState<string>(() => {
+    // Initialize from hash
+    const hash = window.location.hash.replace("#", "");
+    return hash || "/";
+  });
+
+  useEffect(() => {
+    // Update hash when currentPage changes
+    window.location.hash = currentPage === "/" ? "" : currentPage;
+  }, [currentPage]);
+
+  useEffect(() => {
+    // Listen for hash changes (e.g., back button)
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "") || "/";
+      setCurrentPage(hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const handleNavigate = (url: string) => {
     setCurrentPage(url);
