@@ -774,7 +774,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
                 <div className="bg-green-600/10 border border-green-600/40 rounded-xl p-6 flex items-start gap-4">
                   <CheckCircle2 className="w-8 h-8 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-left text-white text-xl">
-                    Garantir sua vaga por R$1.500 e começar a capturar clientes em 72 horas
+                    Garantir sua vaga por R$1997 e começar a capturar clientes em 72 horas
                   </p>
                 </div>
                 <div className="bg-red-600/10 border border-red-600/40 rounded-xl p-6 flex items-start gap-4">
