@@ -11,11 +11,6 @@ export default function App() {
   });
 
   useEffect(() => {
-    // Update hash when currentPage changes
-    window.location.hash = currentPage === "/" ? "" : currentPage;
-  }, [currentPage]);
-
-  useEffect(() => {
     // Listen for hash changes (e.g., back button)
     const handleHashChange = () => {
       const hash = window.location.hash.replace("#", "") || "/";
@@ -28,11 +23,13 @@ export default function App() {
 
   const handleNavigate = (url: string) => {
     setCurrentPage(url);
+    window.location.hash = url === "/" ? "" : url;
     window.scrollTo(0, 0);
   };
 
   const handleBack = () => {
     setCurrentPage("/");
+    window.location.hash = "";
     window.scrollTo(0, 0);
   };
 

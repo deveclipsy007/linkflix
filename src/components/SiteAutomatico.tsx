@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft, Brain, Zap, BarChart3, Lock, Target, Clock, Eye, Smartphone, Search, FileCheck, Shield, TrendingUp, CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 import ShaderBackground from "./ui/shader-background";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Lenis from "lenis";
 import foto02 from "../assets/foto02.png";
 import foto01 from "../assets/foto01.png";
@@ -24,6 +24,19 @@ interface SiteAutomaticoProps {
 
 export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleToggleVideo = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      void video.play();
+    } else {
+      video.pause();
+    }
+  };
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -209,72 +222,80 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="flex justify-center mb-8"
+              className="flex justify-center mb-8 relative"
             >
               <video 
+                ref={videoRef}
                 src={video1112} 
-                controls
-                className="w-96 md:w-[32rem] lg:w-[40rem] h-auto object-contain"
+                className="w-[16rem] md:w-[26rem] lg:w-[34rem] h-auto object-contain rounded-2xl cursor-pointer"
+                loop
+                playsInline
+                onClick={handleToggleVideo}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
               />
+              {!isPlaying && (
+                <motion.button
+                  type="button"
+                  onClick={handleToggleVideo}
+                  className="absolute inset-0 flex items-center justify-center bg-black/50"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Reproduzir vídeo"
+                >
+                  <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl shadow-red-600/50">
+                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </motion.button>
+              )}
             </motion.div>
-            
-            <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto mb-4">
-              Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.997</span>.
+          
+          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto mb-4">
+            Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.997</span>.
+          </p>
+
+          <p className="text-red-400 text-lg mb-10 flex items-center justify-center gap-2">
+            <Zap className="w-5 h-5" /> Apenas 10 sistemas serão liberados nesta condição.
+          </p>
+
+          <div className="max-w-3xl mx-auto mb-12 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-red-600/30 rounded-2xl p-8">
+            <p className="text-gray-200 text-xl md:text-2xl leading-relaxed">
+              Enquanto você dorme, seus concorrentes estão capturando os clientes que deveriam ser seus.
             </p>
-
-            <p className="text-red-400 text-lg mb-10 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" /> Apenas 10 sistemas serão liberados nesta condição.
+            <p className="text-white text-xl md:text-2xl mt-4">
+              Não é falta de produto. É falta de <span className="text-red-500">sistema</span>.
             </p>
+          </div>
 
-            <div className="max-w-3xl mx-auto mb-12 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-red-600/30 rounded-2xl p-8">
-              <p className="text-gray-200 text-xl md:text-2xl leading-relaxed">
-                Enquanto você dorme, seus concorrentes estão capturando os clientes que deveriam ser seus.
-              </p>
-              <p className="text-white text-xl md:text-2xl mt-4">
-                Não é falta de produto. É falta de <span className="text-red-500">sistema</span>.
-              </p>
-            </div>
-
-            <a
-              href="https://wa.me/5562998550007?text=Tenho%20interesse%20no%20site%20autom%C3%A1tico%20da%20Black!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 hover:scale-105 active:scale-95 text-white text-lg rounded-full shadow-2xl shadow-red-600/50 transition-all"
-              style={{ boxShadow: "0 0 40px rgba(220, 38, 38, 0.5)" }}
-            >
-              Ativar meu sistema agora — antes que acabe <Zap className="w-5 h-5 inline ml-2" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SEÇÃO 2 - O PROBLEMA */}
-      <section className="relative py-20 px-6 lg:px-12">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
+          <a
+            href="https://wa.me/5562998550007?text=Tenho%20interesse%20no%20site%20autom%C3%A1tico%20da%20Black!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 hover:scale-105 active:scale-95 text-white text-lg rounded-full shadow-2xl shadow-red-600/50 transition-all"
+            style={{ boxShadow: "0 0 40px rgba(220, 38, 38, 0.5)" }}
           >
-            <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-10">
-              Você não tem um problema de vendas.<br />
-              Você tem um problema de <span className="text-red-600">sistema.</span>
-            </h2>
-            
-            <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-6 max-w-4xl mx-auto mb-12">
-              <p>
-                Todo dia, pessoas procuram exatamente o que você oferece.<br />
-                Mas encontram seu concorrente primeiro.
-              </p>
-              <p>
-                Porque enquanto seu site é apenas um cartão de visitas digital, outros negócios operam com <span className="text-white">máquinas de conversão automatizada</span> — capturando leads, qualificando contatos e fechando vendas sem esforço humano.
-              </p>
-              <p className="text-white text-xl">
-                A diferença entre crescer e estagnar? <span className="text-red-500">Um sistema que vende enquanto você vive.</span>
-              </p>
-            </div>
+            Ativar meu sistema agora — antes que acabe <Zap className="w-5 h-5 inline ml-2" />
+          </a>
+        </motion.div>
+      </div>
+    </section>
 
+    {/* SEÇÃO 2 - O PROBLEMA */}
+    <section className="relative py-20 px-6 lg:px-12">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-10">
+            Você não tem um problema de vendas.<br />
+            Você tem um problema de <span className="text-red-600">sistema.</span>
+          </h2>
+          
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
