@@ -217,7 +217,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             </motion.div>
             
             <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto mb-4">
-              Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.500</span>.
+              Durante a Black System Friday, o sistema de aquisição automatizada da DX Tech — valor real <span className="text-white line-through">R$6.000</span> — está disponível por <span className="text-red-500">R$1.997</span>.
             </p>
 
             <p className="text-red-400 text-lg mb-10 flex items-center justify-center gap-2">
@@ -368,7 +368,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               <span className="text-gray-500 text-6xl font-light line-through">$1,200 dólares (aproximadamente 6 mil reais)</span>
               <span className="text-gray-500 text-6xl">→</span>
               <div className="relative">
-                <span className="text-white text-6xl font-bold drop-shadow-2xl leading-none px-8 py-4 inline-block">R$1.500</span>
+                <span className="text-white text-6xl font-bold drop-shadow-2xl leading-none px-8 py-4 inline-block">R$1.997</span>
                 <span className="block text-red-500 text-6xl font-bold uppercase tracking-wider mt-4 animate-pulse">Black Friday Brasil</span>
               </div>
             </div>
@@ -493,7 +493,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
             <div className="text-center mb-10">
               <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-6">
                 Sistema premium de <span className="line-through text-gray-400">R$6.000</span><br />
-                disponível por <span className="text-red-500">R$1.500</span>.
+                disponível por <span className="text-red-500">R$1.997</span>.
               </h2>
               
               <p className="text-gray-300 text-xl mb-8">
@@ -509,7 +509,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               
               <div className="bg-zinc-950 border border-red-600/30 rounded-xl p-8 text-center">
                 <p className="text-red-400 text-3xl md:text-4xl mb-2">
-                  R$1.500 <span className="text-gray-500 text-xl">(setup único)</span>
+                  R$1.997 <span className="text-gray-500 text-xl">(setup único)</span>
                 </p>
                 <p className="text-white text-2xl">
                   + R$250/mês <span className="text-gray-400 text-lg">(manutenção total)</span>
@@ -517,7 +517,7 @@ export function SiteAutomatico({ onBack }: SiteAutomaticoProps) {
               </div>
 
               <p>
-                Comparado ao investimento real de R$6.000, você está economizando <span className="text-red-500">R$4.500</span>.
+                Comparado ao investimento real de R$6.000, você está economizando <span className="text-red-500">R$4.003</span>.
               </p>
               
               <p className="text-white text-xl bg-red-600/20 border border-red-600/40 rounded-xl p-6">
