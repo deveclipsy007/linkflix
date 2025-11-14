@@ -106,7 +106,7 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
             className="relative rounded-3xl overflow-hidden bg-black border border-neutral-800 shadow-2xl group cursor-pointer mx-auto"
-            style={{ aspectRatio: '16 / 9', width: '100%', maxWidth: '80%' }}
+            style={{ aspectRatio: '16 / 9', width: '100%', maxWidth: 'min(90vw, 80%)' }}
             onClick={handleVideoClick}
           >
             <video
@@ -116,6 +116,8 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
               style={{ objectFit: 'contain' }}
               onEnded={handleVideoEnd}
               onTimeUpdate={handleTimeUpdate}
+              controls={false}
+              playsInline
             />
             
             {/* Gradient Overlay */}
@@ -220,7 +222,7 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-transparent rounded-3xl blur-3xl" />
               <div className="relative bg-gradient-to-br from-red-600/10 to-transparent border border-red-600/20 rounded-3xl p-8 lg:p-12 text-center">
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">Pronto para Transformar?</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">Pronto para construir seu mecanismo?</h3>
                 <p className="text-neutral-400 mb-8 leading-relaxed">
                   Vamos conversar sobre como posso ajudar seu negócio a crescer de forma sustentável e estratégica.
                 </p>
