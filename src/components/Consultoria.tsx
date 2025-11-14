@@ -66,7 +66,7 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
             <ArrowLeft className="w-5 h-5" />
             <span>Voltar</span>
           </button>
-          <h1 className="text-2xl font-light tracking-wide">Para empresários que ganham mais de 10 mil ao mês</h1>
+          <h1 className="text-sm sm:text-lg lg:text-2xl font-light tracking-wide px-2 text-center">Para empresários que ganham mais de 10 mil ao mês</h1>
           <div className="w-16" /> {/* Spacer for alignment */}
         </div>
       </motion.div>
@@ -85,7 +85,7 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-4xl lg:text-5xl font-bold leading-tight mb-3"
+                className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mb-3 px-2"
               >
                 Como Crescer 10x Seu Negócio em 90 Dias
               </motion.h2>
@@ -93,7 +93,7 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                className="text-xl lg:text-2xl text-red-500 font-semibold"
+                className="text-lg sm:text-xl lg:text-2xl text-red-500 font-semibold px-2"
               >
                 (Sem Aumentar Gastos)
               </motion.p>
