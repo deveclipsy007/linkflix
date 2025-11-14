@@ -73,10 +73,11 @@ export const mainLinks = [
   {
     title: "Consultoria",
     description: "Consultoria especializada e estratégica para seu negócio",
-    url: "https://wa.me/5562998550007?text=Tenho%20interesse%20na%20sua%20consultoria%2C%20como%20funciona%3F",
+    url: "/consultoria",
     image: <InstagramPost11 />,
     category: "Negócios",
-    featured: false
+    featured: false,
+    isInternal: true
   },
 ];
 
