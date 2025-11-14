@@ -58,16 +58,8 @@ export function Consultoria({ onBack }: ConsultoriaProps) {
         animate={{ opacity: 1, y: 0 }}
         className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-neutral-800"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span>Voltar</span>
-          </button>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-center">
           <h1 className="text-sm sm:text-lg lg:text-2xl font-light tracking-wide px-2 text-center">Para empresários que ganham mais de 10 mil ao mês</h1>
-          <div className="w-16" /> {/* Spacer for alignment */}
         </div>
       </motion.div>
 
