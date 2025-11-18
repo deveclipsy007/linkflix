@@ -88,8 +88,8 @@ export const NetflixCard = memo(function NetflixCard({ title, description, url, 
         <motion.div
           className="relative rounded-lg overflow-hidden bg-black shadow-xl"
           style={{ 
-            width: isReactComponent ? '280px' : 'auto',
-            height: isReactComponent ? '351px' : 'auto'
+            width: '280px',
+            height: '351px'
           }}
           whileHover={{ 
             boxShadow: "0 20px 60px -10px rgba(220, 38, 38, 0.4)",
