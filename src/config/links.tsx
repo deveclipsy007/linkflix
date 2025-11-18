@@ -10,6 +10,7 @@ import InstagramPost11 from "../imports/InstagramPost11";
 import SiteAutomaticoImage from "../imports/SiteAutomaticoImage";
 import { BlackboardMagnetico } from "../components/BlackboardMagnetico";
 import profilePhoto from "figma:asset/f047008a8c8a122b50b36bde729106166adc5b9b.png";
+import packdeVideosImage from "../assets/packdevideos.png";
 
 export const socialLinks = {
   facebook: "https://facebook.com/yohann",
@@ -59,7 +60,7 @@ export const mainLinks = [
     title: "YouTube",
     description: "Conteúdo exclusivo, tutoriais e conhecimento de qualidade",
     url: import.meta.env.VITE_YOUTUBE_URL || "https://www.youtube.com/@Yohannescher",
-    image: <InstagramPost7 />,
+    image: packdeVideosImage,
     category: "Conteúdo",
     featured: false
   },
