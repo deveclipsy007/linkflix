@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { ArrowLeft, Play, Zap, Video, BookOpen, Sparkles, CheckCircle, Clock, Users, TrendingUp, Lightbulb, Rocket, ChevronDown } from "lucide-react";
 import { useState, useRef } from "react";
+import { toast } from "sonner@2.0.3";
+import { socialLinks } from "../config/links.tsx";
 import narrativaImg from "../assets/narrativa.png";
 import packdeVideosImg from "../assets/packdevideos.png";
 import vslImg from "../assets/vsl.png";
@@ -26,6 +28,12 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
     if (heroVideoRef.current && heroVideoRef.current.currentTime >= 60 && !videoWatched60Seconds) {
       setVideoWatched60Seconds(true);
     }
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = "Tenho%20interesse%20no%20Blackboard%20Magnético%2C%20como%20funciona%3F";
+    window.open(`https://wa.me/${socialLinks.whatsapp}?text=${message}`, "_blank");
+    toast.success("Abrindo WhatsApp...");
   };
 
   const faqs = [
@@ -157,6 +165,7 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
                 transition={{ duration: 0.5 }}
               >
                 <motion.button
+                  onClick={handleWhatsAppClick}
                   className="px-8 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold rounded-lg transition-all"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -586,6 +595,7 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
+                onClick={handleWhatsAppClick}
                 className="px-10 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold rounded-lg transition-all text-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -593,6 +603,7 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
                 Começar Agora
               </motion.button>
               <motion.button
+                onClick={handleWhatsAppClick}
                 className="px-10 py-4 border-2 border-red-600 text-red-500 hover:bg-red-600/10 font-bold rounded-lg transition-all text-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
