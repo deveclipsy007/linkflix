@@ -105,7 +105,7 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
               >
                 <video
                   ref={heroVideoRef}
-                  src="/src/assets/1117 (1).mp4"
+                  src={new URL("../assets/1117 (1).mp4", import.meta.url).href}
                   className="w-full h-full object-cover"
                   muted={false}
                   preload="metadata"
