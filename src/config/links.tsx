@@ -26,7 +26,7 @@ export const mainLinks = [
     title: "Blackboard Magnético",
     description: "Crie um Produto Irresistível em 48 Horas",
     url: "/blackboard-magnetico",
-    image: <BlackboardMagnetico url="/blackboard-magnetico" isInternal={true} />,
+    image: packdeVideosImage,
     category: "Produtos",
     featured: true,
     isInternal: true
@@ -60,7 +60,7 @@ export const mainLinks = [
     title: "YouTube",
     description: "Conteúdo exclusivo, tutoriais e conhecimento de qualidade",
     url: import.meta.env.VITE_YOUTUBE_URL || "https://www.youtube.com/@Yohannescher",
-    image: packdeVideosImage,
+    image: <InstagramPost7 />,
     category: "Conteúdo",
     featured: false
   },
