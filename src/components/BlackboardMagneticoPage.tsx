@@ -69,12 +69,14 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
             transition={{ duration: 0.6 }}
           >
             <motion.div
-              className="mb-4 inline-block px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full shadow-lg hover:bg-white/15 transition-all"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              className="mb-6 inline-block px-8 py-4 bg-gradient-to-r from-white/25 via-white/15 to-white/10 backdrop-blur-3xl border-2 border-red-400/90 rounded-full shadow-2xl shadow-red-500/40 hover:shadow-red-500/60 hover:border-red-300 transition-all duration-300 relative overflow-hidden"
+              initial={{ opacity: 0, y: -15, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+              whileHover={{ y: -8, scale: 1.05 }}
             >
-              <span className="text-white font-semibold text-sm">Perdia horas antes de entender</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 rounded-full blur-xl" />
+              <span className="text-white font-light text-sm leading-relaxed relative z-10">Perdia horas com essa Po#& até entender algo simples sobre criação de vídeo.</span>
             </motion.div>
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
               eu sei que você passa por isso...
