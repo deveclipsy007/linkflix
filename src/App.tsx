@@ -2,6 +2,7 @@ import { LinkHub } from "./components/LinkHub";
 import { SiteAutomatico } from "./components/SiteAutomatico";
 import { DevAcelerado } from "./components/DevAcelerado";
 import { Consultoria } from "./components/Consultoria";
+import { BlackboardMagneticoPage } from "./components/BlackboardMagneticoPage";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -44,6 +45,10 @@ export default function App() {
 
   if (currentPage === "/consultoria") {
     return <Consultoria onBack={handleBack} />;
+  }
+
+  if (currentPage === "/blackboard-magnetico") {
+    return <BlackboardMagneticoPage onBack={handleBack} />;
   }
 
   return <LinkHub onNavigate={handleNavigate} />;

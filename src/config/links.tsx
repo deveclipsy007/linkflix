@@ -8,6 +8,7 @@ import InstagramPost9 from "../imports/InstagramPost9";
 import InstagramPost10 from "../imports/InstagramPost10";
 import InstagramPost11 from "../imports/InstagramPost11";
 import SiteAutomaticoImage from "../imports/SiteAutomaticoImage";
+import { BlackboardMagnetico } from "../components/BlackboardMagnetico";
 import profilePhoto from "figma:asset/f047008a8c8a122b50b36bde729106166adc5b9b.png";
 
 export const socialLinks = {
@@ -20,6 +21,15 @@ export const socialLinks = {
 };
 
 export const mainLinks = [
+  {
+    title: "Blackboard Magnético",
+    description: "Crie um Produto Irresistível em 48 Horas",
+    url: "/blackboard-magnetico",
+    image: <BlackboardMagnetico url="/blackboard-magnetico" isInternal={true} />,
+    category: "Produtos",
+    featured: true,
+    isInternal: true
+  },
   {
     title: "Site Automático",
     description: "Crie seu site profissional em minutos com automação completa",
