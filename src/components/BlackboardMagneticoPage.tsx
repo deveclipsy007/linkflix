@@ -108,6 +108,8 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
                   src="/src/assets/1117 (1).mp4"
                   className="w-full h-full object-cover"
                   muted={false}
+                  preload="metadata"
+                  playsInline
                   onTimeUpdate={handleVideoTimeUpdate}
                   onEnded={() => {
                     setHeroVideoPlaying(false);
@@ -119,11 +121,20 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
                   }}
                 />
                 {!heroVideoPlaying && (
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <motion.div
+                    className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.div
+                      className="w-20 h-20 rounded-full bg-gradient-to-br from-red-500/40 to-red-600/30 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform border border-red-400/50 shadow-lg shadow-red-500/20"
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <Play className="w-10 h-10 text-white fill-white" />
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                 )}
               </div>
             </motion.div>
