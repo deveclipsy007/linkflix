@@ -6,6 +6,7 @@ import { socialLinks } from "../config/links.tsx";
 import narrativaImg from "../assets/narrativa.png";
 import packdeVideosImg from "../assets/packdevideos.png";
 import vslImg from "../assets/vsl.png";
+import { ProcessFlowSvg } from "./ProcessFlowSvg";
 
 interface BlackboardMagneticoPageProps {
   onBack: () => void;
@@ -451,6 +452,24 @@ export function BlackboardMagneticoPage({ onBack }: BlackboardMagneticoPageProps
               </motion.div>
             </motion.div>
           )}
+
+          {/* Creation Process Section */}
+          <motion.div
+            className="mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-8 text-center">
+              O Processo de Criação
+            </h3>
+            <p className="text-center text-slate-300 mb-8 max-w-3xl mx-auto text-lg">
+               Veja como nossa tecnologia transforma uma simples ideia em uma estrutura de vendas completa, passando por roteirização, narração e montagem automatizada.
+            </p>
+            <div className="bg-gradient-to-br from-red-900/10 to-black/60 border border-red-600/20 rounded-xl p-4 md:p-6 overflow-hidden shadow-2xl backdrop-blur-sm">
+               <ProcessFlowSvg />
+            </div>
+          </motion.div>
 
           {/* Three Pillars */}
           <motion.div
